@@ -1,24 +1,24 @@
 # MechaCar Statistical Analysis
 
 ### Overview
-This analysis uses the R statistical programming language to generate different statistical analyses: multiple linear regression, 
+This analysis uses the R statistical programming language to generate different statistical analyses: multiple linear regression, one-sample and two-sample t-tests, and statistical summaries including mean and variance calculations. Using these tools we analyze MechaCar data on fuel efficiency (MPG) and a dataset of suspension coil manufacturing PSI measurements to find the metrics that best predict MPG and quality control on the manufacturing lots making suspension coils. 
 
 ### Resources
-R version 4.0.3 
-R Studio version 1.3.1093
-VS Code version: 1.51.0
+* R version 4.0.3 
+* R Studio version 1.3.1093
+* VS Code version: 1.51.0
 
 ## Linear Regression to Predict MPG
 
 
-The team analyzed a dataset of MechaCar prototype production data to find the variables best predict the Miles per Gallon (MPG). We ran a multiple linear regression analysis in R and found that of the five independent variables (vehicle length, weight, spoiler angle, ground clearance and whether on not a prototype has AWD), only vehicle length and ground clearance provide a non-random amount of variance to the MPG value, at a 0.05% significance level. 
+The team analyzed a dataset of MechaCar prototype production data to find the variables best predict Miles per Gallon (MPG). We ran a multiple linear regression analysis in R and found that of the five independent variables (vehicle length, weight, spoiler angle, ground clearance and whether or not a prototype has AWD), only vehicle length and ground clearance provide a non-random amount of variance to the MPG value, at a 0.05% significance level. 
  
 We first generate our multiple linear regression model using R's Fitting Linear Models function: lm()
 ![mpg_regression](./additional_resources/mpg_regression.png) 
 
 We then generate summary statistical metrics on the regression model using R's summary() function. We see that the p-values of vehicle length(2.60e-12) and ground clearance (5.21e-08) coefficients are well below the 0.05% significance level we utilize for this analysis. Since the Intercept coefficient of our model also has a very low p-value (5.08e-08), it is also statistically significant and indicates that there are other factors, which are not included in this model- that contribute to the variation of MPG. 
 
-![mpg_summary_regrsuspCoil_summaryession](./additional_resources/mpg_summary_regression.png) 
+![mpg_summary_regr](./additional_resources/mpg_summary_regression.png) 
 
 
 * The slope of our multiple linear regression model should not be considered to be zero because the p-value of the model (5.35e-11) is much lower than the 0.05% significance level.
@@ -54,10 +54,12 @@ The paired t-tests for Lot 2 and Lot 3 and the test for Lot 1 and Lot 3 we can s
 
 ## Study Design: MechaCar vs Competition
 
-To quantify how the MechaCar performs against the competition, we design a statistical study to compare cost, fuel efficiency and safety ratings between MechaCar and its competitors. Cost (or purchase price), fuel efficiency and safety rating data for competitors' vehicles is likely easily obtained and would allow us to test statistically In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+To quantify how the MechaCar performs against the competition, we design a statistical study to compare cost, fuel efficiency and safety ratings between MechaCar and its competitors. Cost (or purchase price), fuel efficiency and safety rating data for competitors' vehicles is likely easily obtained and would allow us to statistically test how MechaCar compares to its competition. 
 
-In your description, address the following questions:
-* Test metrics: cost, fuel efficiency (as measured by MPG) and safety rating
+* Test metrics of our Study: 
+    *   cost, 
+    * fuel efficiency (as measured by MPG) 
+    * safety rating
 
 * Our null and alternative hypothesis for each metric being tested:
 
@@ -76,7 +78,5 @@ Ha = MechaCar vehicle safety rating is not equal to or greater than average comp
 *  We would test each hypothesis using two sample t-tests,  for cost, MPG and safety rating of MechaCars vehicles and competitors' vehicles. Because the two sample t-test allows us to statisticallt verify if MechaCar's metrics are equal to, better or within a certain range of competitors' averages and present a good value to potential buyers.
 
 
-* What data is needed to run the statistical test?
-
-We would need a dataset of competitors' vehicles purchase price, fuel efficiency and safety ratings as well as internal MechaCar data vehicle costs or purchase price. We need at least 35 data points to be able to determine a statistically significant t-test.
+* We would need a dataset of competitors' vehicles purchase price, fuel efficiency and safety ratings as well as internal MechaCar data vehicle costs or purchase price. We need at least 35 data points to be able to determine a statistically significant t-test.
 
