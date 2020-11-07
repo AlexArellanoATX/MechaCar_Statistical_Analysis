@@ -63,17 +63,17 @@ To quantify how the MechaCar performs against the competition, we design a stati
 
 * Our null and alternative hypothesis for each metric being tested:
 
-Cost 
-Ho = MechaCar vehicle cost is within 5% of average cost of competitors's vehicles prices
-Ha = MechaCar vehicle cost is not within 5% of average cost of competitors's vehicles
+    * Cost 
+        * Null Hypothesis: MechaCar vehicle cost is within 5% of average cost of competitors's vehicles prices
+        * Alternative Hypothesis: MechaCar vehicle cost is not within 5% of average cost of competitors's vehicles
 
-Fuel Efficiency
-Ho = MechaCar vehicle MPG is more fuel efficient than the average competitors' fuel efficiency.
-Ha = MechaCar vehicle MPG is not more fuel efficient than the average competitors' fuel efficiency.
+    * Fuel Efficiency
+        * Null Hypothesis: MechaCar vehicle MPG is more fuel efficient than the average competitors' fuel efficiency.
+        * Alternative Hypothesis: MechaCar vehicle MPG is not more fuel efficient than the average competitors' fuel efficiency.
 
-Safety Rating
-Ho = MechaCar vehicle safety rating is equal to or greater than average competitors' safety rating.
-Ha = MechaCar vehicle safety rating is not equal to or greater than average competitors' safety rating.
+    * Safety Rating
+        * Null Hypothesis: MechaCar vehicle safety rating is equal to or greater than average competitors' safety rating.
+        * Alternative Hypothesis: MechaCar vehicle safety rating is not equal to or greater than average competitors' safety rating.
 
 *  We would test each hypothesis using two sample t-tests,  for cost, MPG and safety rating of MechaCars vehicles and competitors' vehicles. Because the two sample t-test allows us to statisticallt verify if MechaCar's metrics are equal to, better or within a certain range of competitors' averages and present a good value to potential buyers.
 
